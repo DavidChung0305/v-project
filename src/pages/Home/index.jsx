@@ -15,6 +15,7 @@ import GrabCursor from "@/components/Swiper/grabCursor.jsx"
 import { SwiperSlide } from 'swiper/react';
 import { useVideoStore } from "@/store/video.js"
 import {Api} from "@/api/module/video.js"
+import { Button, Modal } from 'antd';
 
 const danceStyle = [
   'Popping', 'Locking', 'Waacking', 'HipHop', 'Krump', 'Breaking', 'Tutting', 'House', 'Swing', 'Dance Hall', 'Urban', 'New Jack Swing', 'Voguing', 'Flexing', 'Shuffling', 'C-Walk', 'Bounce', 'Sliding', 'Robot',
@@ -79,6 +80,19 @@ const Home = () => {
   const { hotVideos, setHotVideos} = useVideoStore()
   const { dancerCards, setDancerCards} = useVideoStore()
 
+  //Modal以下
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     if(!dancerCards.length){
       getChannelsData().then(res => {
@@ -109,10 +123,6 @@ const Home = () => {
   console.log(hotVideos)
   console.log(dancerCards)
 
-  const danceStyleControl = () =>{
-    document.getElementById('stylesContainer').classList.toggle('hidden')
-  }
-
   return (
     <>
     <h4 className="mt-1 font-bold">熱門舞風</h4>
@@ -124,17 +134,15 @@ const Home = () => {
           </button>
         ))}
       </div>
-      <button><i className="fa-solid fa-ellipsis hover:scale-150 duration-200" onClick={()=>danceStyleControl()}></i></button>
+      <button><i className="fa-solid fa-ellipsis hover:scale-150 duration-200" onClick={showModal}></i></button>
     </div>
-    <div id="stylesContainer" className="h-[500px] w-[750px] bg-slate-500 z-20 fixed left-[300px] top-[100px] rounded-xl ">
-      <div className="h-[450px] w-[700px] my-3 mx-5 ">
-      {danceStyle.map((dance, idx) =>(
-        <button key={idx} className="py-2 px-3 border-2 border-white border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-105 duration-200">
-          {dance}
-        </button>
-      ))}
-      </div>
-    </div>
+    <Modal title="全部舞風" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+          {danceStyle.map((dance, idx) =>(
+            <button key={idx} className="py-2 px-3 border-2 border-black border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-110 duration-200">
+            {dance}
+            </button>
+          ))}
+    </Modal>
     <h4 className="mt-5 font-bold">舞者</h4>
     <div className="flex mt-2">
     <GrabCursor>
