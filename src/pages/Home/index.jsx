@@ -18,8 +18,8 @@ import {Api} from "@/api/module/video.js"
 import { Button, Modal } from 'antd';
 
 const danceStyle = [
-  'Popping', 'Locking', 'Waacking', 'HipHop', 'Krump', 'Breaking', 'Tutting', 'House', 'Swing', 'Dance Hall', 'Urban', 'New Jack Swing', 'Voguing', 'Flexing', 'Shuffling', 'C-Walk', 'Bounce', 'Sliding', 'Robot',
-  'Jookin', 'Jerkin', 'Reggaeton', 'Waving', 'Turfing', 'Threading'
+  'Popping', 'Locking', 'Waacking', 'HipHop', 'Krump', 'Breaking', 'K-Pop', 'Tutting', 'House', 'Swing', 'Dance Hall', 'Urban', 'New Jack Swing', 'Voguing', 'Flexing', 'Shuffling', 'C-Walk', 'Bounce', 'Sliding', 'Robot',
+  'Jookin', 'Jerkin', 'Reggaeton', 'Waving', 'Turfing', 'Threading', 'Others'
 ]
 
 //影片ID

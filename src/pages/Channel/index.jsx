@@ -6,9 +6,10 @@ import { useEffect, useState } from "react"
 import { SwiperSlide } from 'swiper/react'
 import Swiper from "@/components/Swiper/manipulate.jsx"
 import {Api} from "@/api/module/video.js"
+import { useVideoStore } from "@/store/video.js"
 
 const Channel = () => {
-const [ channels, setChannels] = useState([])
+const { channels, setChannels} = useVideoStore()
 const navigate = useNavigate()
 
   const { id } = useParams()
@@ -22,25 +23,50 @@ const navigate = useNavigate()
   console.log(playList.items[0].snippet)
   }
   */
+
+  //還是要做一個subList全局狀態來儲存 image,title,id,subStatus
+  //id用來匹配頻道頁，subStatus傳遞去顯示畫面是否訂閱
+  //再用subList渲染sideBar
+  
+  const subButton = ()=>{
+    const subItem = document.getElementById(`${channels.channelId}`)
+    subItem.classList.toggle('sub-checked')
+    if(!subItem.classList.contains('sub-checked')){
+      subItem.innerText = ' 未訂閱'
+      subItem.classList.remove('fa-solid')
+      subItem.classList.add("fa-regular")
+      channels.channelSubStatus = "false"
+      }else{
+        subItem.innerText = ' 已訂閱'
+        subItem.classList.remove('fa-regular')
+        subItem.classList.add("fa-solid")
+        channels.channelSubStatus = "true"
+      }
+      setChannels(channels)
+  }
   
   const getChannel = async() => {
     Api.getChannels().then(res =>{
       const channelDatas = res.data
-      console.log(channelDatas)
       const channelData = channelDatas.find(item => item.channelId === id)
-      console.log(channelData)
       setChannels(channelData)
     })
   }
 
-  getChannel()
 
   useEffect(() => {
-    getChannel()
-  }, [])
+    if(channels == null){
+      getChannel()
+    }
+    if(channels.channelId !== id){
+      getChannel()
+    }
+
+  }, [channels])
+
   return (
   <div className="pl-3">
-    <ChannelInfo title={channels.channelTitle} image={channels.channelImage} SVnumber={channels.SVnumber} introduction={channels.channelDescription} />
+    <ChannelInfo id={channels?.channelId} onClick={()=>subButton()} title={channels?.channelTitle} image={channels?.channelImage} SVnumber={channels?.SVnumber} introduction={channels?.channelDescription} />
     <h4 className="mt-3 font-bold">為你推薦</h4>
     <div className="flex mt-4 border-b border-solid border-sidebarBorder pb-2">
     <Swiper >

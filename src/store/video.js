@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { persist, subscribeWithSelector } from 'zustand/middleware'
 
 
 export const useVideoStore = create(
@@ -9,6 +9,8 @@ export const useVideoStore = create(
       setHotVideos:(videos) => set({ hotVideos: videos }),
       dancerCards:[],
       setDancerCards:(newDancerCard) => set({ dancerCards: newDancerCard }),
+      channels:[],
+      setChannels:(subscribers) => set({channels:subscribers})
     }),
     {
       name: 'video', 
