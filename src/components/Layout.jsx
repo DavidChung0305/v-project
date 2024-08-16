@@ -2,11 +2,13 @@ import Header from "./Header"
 import Sidebar from "./SideBar"
 import { Outlet } from 'react-router-dom'
 
+
 const Layout = ()=>{
   return(
-    <div className="bg-black text-white">
+    <div id='layout' className="bg-black text-white">
       <Header />
       <Sidebar />
+      <div id='mask' className="bg-slate-400 opacity-50 w-full h-full fixed z-30 hidden"></div>
       <div className="ml-[20px] pt-[72px] min-h-screen">
         <Outlet />
       </div>

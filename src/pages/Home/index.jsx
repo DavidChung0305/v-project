@@ -17,14 +17,8 @@ import { useVideoStore } from "@/store/video.js"
 import {Api} from "@/api/module/video.js"
 
 const danceStyle = [
-  'Popping',
-  'Locking',
-  'Wacking',
-  'HipHop',
-  'Krump',
-  'Breaking',
-  'Tutting',
-  'House'
+  'Popping', 'Locking', 'Waacking', 'HipHop', 'Krump', 'Breaking', 'Tutting', 'House', 'Swing', 'Dance Hall', 'Urban', 'New Jack Swing', 'Voguing', 'Flexing', 'Shuffling', 'C-Walk', 'Bounce', 'Sliding', 'Robot',
+  'Jookin', 'Jerkin', 'Reggaeton', 'Waving', 'Turfing', 'Threading'
 ]
 
 //影片ID
@@ -115,16 +109,31 @@ const Home = () => {
   console.log(hotVideos)
   console.log(dancerCards)
 
+  const danceStyleControl = () =>{
+    document.getElementById('stylesContainer').classList.toggle('hidden')
+  }
+
   return (
     <>
     <h4 className="mt-1 font-bold">熱門舞風</h4>
-    <div className="mt-2">
+    <div className="mt-2 flex">
+      <div className="w-[1180px] h-[70px] py-2 overflow-hidden ">
+        {danceStyle.map((dance, idx) =>(
+          <button key={idx} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 ml-2 mr-10 last:mr-0 hover:scale-105 duration-200">
+            {dance}
+          </button>
+        ))}
+      </div>
+      <button><i className="fa-solid fa-ellipsis hover:scale-150 duration-200" onClick={()=>danceStyleControl()}></i></button>
+    </div>
+    <div id="stylesContainer" className="h-[500px] w-[750px] bg-slate-500 z-20 fixed left-[300px] top-[100px] rounded-xl ">
+      <div className="h-[450px] w-[700px] my-3 mx-5 ">
       {danceStyle.map((dance, idx) =>(
-        <button key={idx} className="py-2 px-3 border-2 border-white border-solid rounded-lg mr-12 last:mr-0">
+        <button key={idx} className="py-2 px-3 border-2 border-white border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-105 duration-200">
           {dance}
         </button>
       ))}
-      <button><i className="fa-solid fa-ellipsis"></i></button>
+      </div>
     </div>
     <h4 className="mt-5 font-bold">舞者</h4>
     <div className="flex mt-2">

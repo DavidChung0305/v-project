@@ -7,11 +7,11 @@ const Header = () => {
 
   const sideBarControll = () =>{
     document.getElementById("sideBar").classList.toggle('-translate-x-full')
-
+    document.getElementById("mask").classList.toggle('hidden')
   }
 
   return(
-  <header className="fixed top-0 w-full z-10 h-[72px] bg-white text-black  text-xl header">
+  <header className="fixed top-0 w-full z-40 h-[72px] bg-white text-black  text-xl header">
     <div className='px-5 py-3'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center'>
