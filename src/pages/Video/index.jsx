@@ -40,12 +40,19 @@ const Video = () => {
   },[])
 
   return(
-    <>
+    <div className="ml-2">
       <div className="mt-2">
-       <iframe width="700" height="394" src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       <p className="text-[20px] w-[700px] pt-2">{coverData.title}</p>
+       <iframe className="rounded-xl" width="950" height="535" src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <p className="text-[20px] w-[800px] pt-2">{coverData.title}</p>
       </div>
-      <VideoChannelCard key={coverData.videoId} image={coverData.channelImage} title={coverData.channelTitle} sNumber={coverData.sNumber} onClick={() => navigate(`/channel/${coverData.channelId}`)} />
+      <div className=" flex w-[900px]">
+        <VideoChannelCard key={coverData.videoId} image={coverData.channelImage} title={coverData.channelTitle} sNumber={coverData.sNumber} onClick={() => navigate(`/channel/${coverData.channelId}`)} />
+        <div className="flex ml-[200px] my-auto">
+          <i className="fa-regular fa-thumbs-up cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2 "></i>
+          <i className="fa-regular fa-thumbs-down cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2"></i>
+          <i className="fa-solid fa-ellipsis cursor-pointer text-[30px] text-black border  rounded-full w-[45px] h-[45px] pl-2.5 pt-1.5 bg-slate-200 hover:scale-110 duration-200 ml-6" ></i>
+        </div>
+      </div>
       <div className="mt-[40px] flex">
         <img src={boy} className="rounded-full w-[70px] h-[70px]"/>
         <div className="ml-8 ">
@@ -68,7 +75,7 @@ const Video = () => {
       {commentsData.map( item => (
         <CommentCard id={item.authorChannelId} image={item.authorProfileImageUrl} name={item.authorDisplayName} text={item.textDisplay} />
       ))}
-    </>
+    </div>
 
   )
 }
