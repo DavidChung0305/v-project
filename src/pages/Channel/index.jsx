@@ -10,6 +10,7 @@ import { useVideoStore } from "@/store/video.js"
 
 const Channel = () => {
 const { channels, setChannels} = useVideoStore()
+const { subList, setSubList} = useVideoStore()
 const navigate = useNavigate()
 
   const { id } = useParams()
@@ -24,9 +25,13 @@ const navigate = useNavigate()
   }
   */
 
-  //還是要做一個subList全局狀態來儲存 image,title,id,subStatus
-  //id用來匹配頻道頁，subStatus傳遞去顯示畫面是否訂閱
-  //再用subList渲染sideBar
+  const getChannel = async() => {
+    Api.getChannels().then(res =>{
+      const channelDatas = res.data
+      const channelData = channelDatas.find(item => item.channelId === id)
+      setChannels(channelData)
+    })
+  }
   
   const subButton = ()=>{
     const subItem = document.getElementById(`${channels.channelId}`)
@@ -35,23 +40,34 @@ const navigate = useNavigate()
       subItem.innerText = ' 未訂閱'
       subItem.classList.remove('fa-solid')
       subItem.classList.add("fa-regular")
-      channels.channelSubStatus = "false"
+      channels.channelSubStatus = false
       }else{
         subItem.innerText = ' 已訂閱'
         subItem.classList.remove('fa-regular')
         subItem.classList.add("fa-solid")
-        channels.channelSubStatus = "true"
+        channels.channelSubStatus = true
       }
+      setSubStatus()
       setChannels(channels)
   }
   
-  const getChannel = async() => {
-    Api.getChannels().then(res =>{
-      const channelDatas = res.data
-      const channelData = channelDatas.find(item => item.channelId === id)
-      setChannels(channelData)
-    })
+//還是要做一個subList全局狀態來儲存 image,title,id,subStatus
+  //id用來匹配頻道頁，subStatus傳遞去顯示畫面是否訂閱
+  //再用subList渲染sideBar
+
+  const setSubStatus = ()=>{
+    //放訂閱狀態資料，再篩選出已訂閱的資料來渲染頻道按鈕和sidebar你的訂閱
+    const foundItem = subList.find(item => item.id === channels.channelId);
+
+    if (foundItem !== undefined) {
+      foundItem.subStatus = !foundItem.subStatus;
+    }
+    else{
+      subList.push({ id:channels.channelId, title:channels.channelTitle, image:channels.channelImage, subStatus:channels.channelSubStatus})
+    }
+    setSubList(subList)
   }
+  
 
 
   useEffect(() => {

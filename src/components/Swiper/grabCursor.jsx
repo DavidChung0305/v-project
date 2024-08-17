@@ -13,8 +13,8 @@ import { Pagination } from 'swiper/modules';
 const GrabCursor = ({children})=> {
   return (
       <Swiper
-        slidesPerView={7}
-        centeredSlides={true}
+        slidesPerView={6}
+        centeredSlides={false}
         spaceBetween={10}
         grabCursor={true}
         pagination={{

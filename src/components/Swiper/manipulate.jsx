@@ -17,7 +17,7 @@ const Manipulate = ({ children }) =>{
   return(
     <Swiper
         slidesPerView={3}
-        centeredSlides={true}
+        centeredSlides={false}
         spaceBetween={30}
         pagination={{
           type: 'fraction',

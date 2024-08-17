@@ -1,6 +1,8 @@
 import SidebarButton from "@/components/SidebarButton"
+import SideBarSubCard from "@/components/SideBarSubCard"
 import { useNavigate } from "react-router-dom"
 import big from "@/assets/images/big.jpg"
+import { useVideoStore } from "@/store/video.js"
 
 const contentList = [
   {
@@ -22,6 +24,10 @@ const contentList = [
 
 const SideBar = () => {
   const navigate = useNavigate()
+  const { subList, setSubList} = useVideoStore()
+  const subData = subList.filter( item => item.subStatus === true  )
+  console.log(subData)
+
   return(
     <div id="sideBar" className="p-5 h-full fixed top-[72px] left-0 -translate-x-full transform transition-transform duration-300 ease-in-out bg-black z-50 ">
       <div className="w-[250px] border-b border-solid border-sidebarBorder pb-2">
@@ -46,7 +52,10 @@ const SideBar = () => {
       <button className="flex justify-start w-full items-center p-2 rounded-md hover:bg-sidebarButtonColor " onClick={()=>navigate(`/`)}>
           <img src={big} className="h-[40px] rounded-full" />
           <span className="ml-3" >你開心就好</span>
-        </button>
+      </button>
+      {subData.map( item => (
+        <SideBarSubCard image={item.image} title={item.title} onClick={()=>navigate(`/channel/${item.id}`)} />
+      ))}
     </div>
   )
 }
