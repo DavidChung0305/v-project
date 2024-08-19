@@ -1,4 +1,20 @@
+import { Button, Modal } from 'antd';
+import { useState } from 'react';
+
 const ChannelInfo = ({image, title, SVnumber, introduction, id, onClick}) =>{
+  //Modal以下
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  
   return(
     <div className="flex mt-4 border-b border-solid border-sidebarBorder pb-2">
       <img src={image} className=" w-[250px] h-[250px] rounded-full" />
@@ -7,8 +23,11 @@ const ChannelInfo = ({image, title, SVnumber, introduction, id, onClick}) =>{
         <p className="pl-5 text-gray-400 ">{SVnumber}</p>
         <div className="flex">
           <p className="text-[15px] text-gray-400 mt-2 w-[300px] h-[25px] overflow-hidden text-ellipsis">{introduction}</p>
-          <button className="text-[15px] mt-[6px]">...顯示更多</button>
+          <button className="text-[15px] mt-[6px]" onClick={showModal}>...顯示更多</button>
         </div>
+        <Modal title="舞者介紹" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+          {introduction}
+        </Modal>
         <i id={id} onClick={onClick} className="mt-8 fa-regular fa-bell w-[130px] h-[42px] text-2xl pl-[8px] pt-1  border border-solid border-white rounded-lg  hover:bg-sidebarButtonColor cursor-pointer duration-200"></i>
       </div>
     </div>

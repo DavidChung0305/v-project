@@ -8,12 +8,13 @@ import Swiper from "@/components/Swiper/manipulate.jsx"
 import {Api} from "@/api/module/video.js"
 import { useVideoStore } from "@/store/video.js"
 
+
 const Channel = () => {
 const { channels, setChannels} = useVideoStore()
 const { subList, setSubList} = useVideoStore()
 const navigate = useNavigate()
+const { id } = useParams()
 
-  const { id } = useParams()
   /* // 以下是YouTube channel data 取法
 
   const getChannel = async() => {
@@ -35,6 +36,7 @@ const navigate = useNavigate()
   
   const subButton = ()=>{
     const subItem = document.getElementById(`${channels.channelId}`)
+    console.log(subItem)
     subItem.classList.toggle('sub-checked')
     if(!subItem.classList.contains('sub-checked')){
       subItem.innerText = ' 未訂閱'

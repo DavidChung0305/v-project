@@ -1,7 +1,6 @@
 import SidebarButton from "@/components/SidebarButton"
 import SideBarSubCard from "@/components/SideBarSubCard"
 import { useNavigate } from "react-router-dom"
-import big from "@/assets/images/big.jpg"
 import { useVideoStore } from "@/store/video.js"
 
 const contentList = [
@@ -50,7 +49,7 @@ const SideBar = () => {
       </div>
       <h3 className="pt-2 font-bold">訂閱內容</h3>
       <button className="flex justify-start w-full items-center p-2 rounded-md hover:bg-sidebarButtonColor " onClick={()=>navigate(`/`)}>
-          <img src={big} className="h-[40px] rounded-full" />
+          <img src='https://scontent.ftpe2-1.fna.fbcdn.net/v/t39.30808-6/407686796_267440842978032_7109015090120144939_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_7ztxAx3eFUQ7kNvgEDKp8f&_nc_ht=scontent.ftpe2-1.fna&cb_e2o_trans=t&oh=00_AYA64seiRoyJ55SyWBAjvUoowAb5DNTxocdwfwYMPtiTQA&oe=66C8B243' className="h-[40px] rounded-full" />
           <span className="ml-3" >你開心就好</span>
       </button>
       {subData.map( item => (

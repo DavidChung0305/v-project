@@ -12,7 +12,9 @@ export const useVideoStore = create(
       channels:[],
       setChannels:(subscriber) => set({channels:subscriber}),
       subList:[],
-      setSubList:(subscribers) => set({subList: subscribers})
+      setSubList:(subscribers) => set({subList: subscribers}),
+      likeVideos:[],
+      setLikeVideos:(videos) => set({likeVideos:videos})
     }),
     {
       name: 'video', 

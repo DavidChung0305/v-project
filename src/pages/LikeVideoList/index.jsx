@@ -1,18 +1,20 @@
 import axios from "axios"
 import beigow from "@/assets/images/beigow.jpeg"
 import './style.css'
+import LikeVideoCard from "@/components/LikeVideoCard"
+import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { useVideoStore } from "@/store/video.js"
+
 
 const LikeVideoList= () =>{
-  //api抓video image,title,time,channel，功能跳轉到影片頁
-  const test = [
-    { videoId:"yMSfTV9OQSk"}
-  ]
-  const getVideo = async() => {
-    const { data:videoData} = await axios.get(`https://www.googleapis.com/youtube/v3/videos?id=${test[0].videoId}&key=AIzaSyB6yEJercL6to8ROq9DFH2gUAJA0Xk1mCc&part=snippet`)
-    console.log(videoData)
-  }
-  getVideo()
+  const navigate = useNavigate()
+  const {likeVideos, setLikeVideos} = useVideoStore()
+  const likeData = likeVideos.filter( item => item.likeStatus === true  )
+  console.log(likeData)
+
+
+
   return(
     <div className="flex mt-4 ml-20 ">
       <div className='card'>
@@ -24,7 +26,7 @@ const LikeVideoList= () =>{
           <i class="fa-solid fa-play w-[120px] h-[30px] border border-solid rounded-full px-4 py-1.5 mt-5 cursor-pointer"> 全部播放</i>
         </div>
       </div>
-      <div className="ml-2">
+      <div className="ml-4">
         <i className="fa-solid fa-arrows-up-down w-[400px] h-[60px] text-[30px] pl-3 pt-3 "></i>
         <div className="flex w-[800px] h-[90px] hover:bg-slate-500 rounded-lg">
           <img src={beigow} className="w-[140px] h-[85px] ml-2 my-auto rounded-lg" />
@@ -33,6 +35,9 @@ const LikeVideoList= () =>{
             <p className="text-[13px]  mt-2 text-slate-400">talk街舞  ，  觀看次數：2次 ， 兩個月前</p>
           </div>
         </div>
+        {likeData.map( item =>(
+          <LikeVideoCard image={item.image} title={item.title} onClick={()=>navigate(`/video/${item.id}`)}/>
+        ))}
       </div>
     </div>
   )
