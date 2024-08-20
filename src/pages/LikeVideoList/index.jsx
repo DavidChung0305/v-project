@@ -23,7 +23,7 @@ const LikeVideoList= () =>{
           <h1 className="text-[30px] font-bold  mt-5">喜歡的影片</h1>
           <p className="font-bold  mt-3">惠勝</p>
           <p className="text-[13px]  mt-2 text-slate-500">722 部影片  ，  觀看次數：2次</p>
-          <i class="fa-solid fa-play w-[120px] h-[30px] border border-solid rounded-full px-4 py-1.5 mt-5 cursor-pointer"> 全部播放</i>
+          <i className="fa-solid fa-play w-[120px] h-[30px] border border-solid rounded-full px-4 py-1.5 mt-5 cursor-pointer"> 全部播放</i>
         </div>
       </div>
       <div className="ml-4">
@@ -36,7 +36,7 @@ const LikeVideoList= () =>{
           </div>
         </div>
         {likeData.map( item =>(
-          <LikeVideoCard image={item.image} title={item.title} onClick={()=>navigate(`/video/${item.id}`)}/>
+          <LikeVideoCard image={item.image.url} title={item.title} onClick={()=>navigate(`/video/${item.id}`)}/>
         ))}
       </div>
     </div>

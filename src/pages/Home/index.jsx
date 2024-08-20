@@ -129,7 +129,7 @@ const Home = () => {
     <div className="mt-2 flex">
       <div className="w-[1180px] h-[70px] py-2 overflow-hidden ">
         {danceStyle.map((dance, idx) =>(
-          <button key={idx} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 ml-2 mr-10 last:mr-0 hover:scale-105 duration-200">
+          <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 ml-2 mr-10 last:mr-0 hover:scale-105 duration-200">
             {dance}
           </button>
         ))}
@@ -138,7 +138,7 @@ const Home = () => {
     </div>
     <Modal title="全部舞風" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           {danceStyle.map((dance, idx) =>(
-            <button key={idx} className="py-2 px-3 border-2 border-black border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-110 duration-200">
+            <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-black border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-110 duration-200">
             {dance}
             </button>
           ))}

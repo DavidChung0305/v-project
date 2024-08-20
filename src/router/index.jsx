@@ -1,6 +1,7 @@
 import { createHashRouter } from "react-router-dom";
 import { Home, Login, NotFound, Channel, Video, Short, UserChannel,  LikeVideoList, PlaylistLater } from "@/pages";
 import Layout from "@/components/Layout";
+import { Style } from "../pages";
 
 const router = createHashRouter([
   {
@@ -18,6 +19,10 @@ const router = createHashRouter([
       {
         path: '/video/:id',
         element: <Video />
+      },
+      {
+        path: '/style/:id',
+        element: <Style />
       },
       {
         path: '/login',

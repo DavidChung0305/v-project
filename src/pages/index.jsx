@@ -9,5 +9,6 @@ import Short from './Short'
 import UserChannel from './UserChannel'
 import LikeVideoList from './LikeVideoList'
 import PlaylistLater from './PlaylistLater'
+import Style from './Style'
 
-export { Home, Login, NotFound, Channel, Video, Short, UserChannel, LikeVideoList, PlaylistLater }
+export { Home, Login, NotFound, Channel, Video, Short, UserChannel, LikeVideoList, PlaylistLater, Style }

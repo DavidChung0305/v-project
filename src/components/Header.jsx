@@ -20,7 +20,7 @@ const Header = () => {
           </div>
           <div className='flex justify-center items-center'>
             <input className="border border-black border-solid focus:outline-none h-10 rounded mr-2 w-56 pl-3" />
-            <button className='hover:bg-slate-300 rounded h-10 w-10'>
+            <button className='hover:bg-slate-300 rounded duration-200 h-10 w-10'>
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>

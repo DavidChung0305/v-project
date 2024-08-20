@@ -74,7 +74,7 @@ const Video = () => {
       </div>
       <div className=" flex w-[900px]">
         <VideoChannelCard key={coverData?.videoId} image={coverData?.channelImage} title={coverData?.channelTitle} sNumber={coverData?.sNumber} onClick={() => navigate(`/channel/${coverData?.channelId}`)} />
-        <div className="flex ml-[200px] my-auto">
+        <div className="flex ml-[170px] my-auto">
           <i id={coverData?.videoId} onClick={()=>likeButton()} className="like-checked fa-regular fa-thumbs-up cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2 "></i>
           <i className="fa-regular fa-thumbs-down cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2"></i>
           <i className="fa-solid fa-ellipsis cursor-pointer text-[30px] text-black border  rounded-full w-[45px] h-[45px] pl-2.5 pt-1.5 bg-slate-200 hover:scale-110 duration-200 ml-6" ></i>
