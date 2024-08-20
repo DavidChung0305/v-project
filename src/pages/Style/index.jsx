@@ -34,10 +34,10 @@ const Style = () => {
           </div>
         </div>
       </div>
-      {coverData?.map( item =>{
+      {coverData?.map( item =>(
         <StyleChannelCard title={item.channelTitle} image={item.channelImage} 
         style={item.danceStyle} introduction={item.channelDescription} onClick={()=>navigate(`/channel/${item.channelId}`)} />
-      })}
+      ))}
     </div>
   )
 }
