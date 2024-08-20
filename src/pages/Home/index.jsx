@@ -129,7 +129,7 @@ const Home = () => {
     <div className="mt-2 flex">
       <div className="w-[1180px] h-[70px] py-2 overflow-hidden ">
         {danceStyle.map((dance, idx) =>(
-          <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 ml-2 mr-10 last:mr-0 hover:scale-105 duration-200">
+          <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 ml-2 mr-10 last:mr-0 hover:scale-110 duration-200">
             {dance}
           </button>
         ))}
@@ -147,7 +147,7 @@ const Home = () => {
     <div className="flex mt-2">
     <GrabCursor>
       {dancerCards.map(item => (
-        <SwiperSlide className="w-[200px]">
+        <SwiperSlide className="w-[200px] pl-2">
           <Dancer key={item.channelId} image={item.channelImage} name={item.channelTitle} style={item.danceStyle} onClick={() => navigate(`/channel/${item.channelId}`)} />
         </SwiperSlide>
       ))}
