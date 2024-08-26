@@ -48,7 +48,7 @@ const Video = () => {
   const likeButton = ()=>{
     const likeItem = document.getElementById(`${coverData?.videoId}`)
     likeItem.classList.toggle('like-checked')
-    if(!likeItem.classList.contains('like-checked')){
+    if(likeItem.classList.contains('like-checked')){
       likeItem.classList.remove('fa-solid')
       likeItem.classList.add("fa-regular")
       likeItem.likeStatus = false

@@ -48,13 +48,12 @@ const router = createHashRouter([
         path: '/search/:id',
         element: <Search />
       },
+      {
+        path: '*',
+        element: <NotFound />
+      },
     ]
   },
-  {
-    path: '*',
-    element: <NotFound />
-  },
-  
 ])
 
 export default router
