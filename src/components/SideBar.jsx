@@ -24,7 +24,7 @@ const contentList = [
 const SideBar = () => {
   const navigate = useNavigate()
   const { subList, setSubList} = useVideoStore()
-  const subData = subList.filter( item => item.subStatus === true  )
+  const subData = subList.filter( item => item.subStatus  )
   console.log(subData)
 
   return(

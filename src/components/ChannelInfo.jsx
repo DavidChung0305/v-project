@@ -1,5 +1,6 @@
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
+import SubscribeButton from './SubscribeButton';
 
 const ChannelInfo = ({image, title, SVnumber, introduction, id, onClick}) =>{
   //Modal以下
@@ -28,7 +29,7 @@ const ChannelInfo = ({image, title, SVnumber, introduction, id, onClick}) =>{
         <Modal title="舞者介紹" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           {introduction}
         </Modal>
-        <i id={id} onClick={onClick} className="mt-8 fa-regular fa-bell w-[130px] h-[42px] text-2xl pl-[8px] pt-1  border border-solid border-white rounded-lg  hover:bg-sidebarButtonColor cursor-pointer duration-200"></i>
+        <SubscribeButton id={id} />
       </div>
     </div>
   )
