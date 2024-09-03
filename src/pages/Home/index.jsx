@@ -120,8 +120,6 @@ const Home = () => {
     }
   }, [])
 
-  console.log(hotVideos)
-  console.log(dancerCards)
 
   return (
     <>

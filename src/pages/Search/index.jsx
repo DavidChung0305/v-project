@@ -1,7 +1,16 @@
 import beigow from "@/assets/images/beigow.jpeg"
 import snow from "@/assets/images/snow.png"
+import SearchCard from "@/components/SearchCard"
+import { useParams, useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useVideoStore } from "@/store/video.js"
+
 
 const Search = () =>{
+  const { searchVideos, setSearchVideos} = useVideoStore()
+  const navigate = useNavigate()
+
+  console.log(searchVideos)
  return (<>
   <div  className="mt-3 ml-[200px] flex w-[1069px] h-[290px] hover:bg-slate-500 hover:scale-105 duration-200 rounded-lg">
       <img src={beigow} className="w-[440px] h-[280px] ml-2 my-auto rounded-lg object-cover" />
@@ -14,6 +23,11 @@ const Search = () =>{
           </div>
       </div>
   </div>
+  {searchVideos.map( item => (
+    <SearchCard title={item.title} image={item.thumbnails?.maxres} channelTitle={item.channelTitle} 
+    channelImage={item.channelImage} onClick={() => navigate(`/video/${item.videoId}`)}
+    />
+  ))}
  </>)
 }
 

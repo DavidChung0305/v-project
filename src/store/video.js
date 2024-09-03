@@ -14,7 +14,11 @@ export const useVideoStore = create(
       subList:[],
       setSubList:(subscribers) => set({subList: subscribers}),
       likeVideos:[],
-      setLikeVideos:(videos) => set({likeVideos:videos})
+      setLikeVideos:(videos) => set({likeVideos:videos}),
+      allVideos:[],
+      setAllVideos:(videos) => set({allVideos:videos}),
+      searchVideos:[],
+      setSearchVideos:(videos) => set({searchVideos:videos})
     }),
     {
       name: 'video', 
