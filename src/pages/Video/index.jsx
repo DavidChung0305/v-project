@@ -26,12 +26,20 @@ const Video = () => {
     setCommentsData(data)
   }
 
-  const getVideo = ()=>{
+  const getVideo = () =>{
     Api.getVideos().then(res =>{
       const videoData = res.data.find( item => item.videoId === id)
       setCoverData(videoData)
     })
   }
+
+  /*<div className="mt-[40px] flex">
+        <img src={boy} className="rounded-full w-[70px] h-[70px]"/>
+        <div className="ml-8 ">
+          <input className="mt-2 w-[450px] bg-black  text-[15px] text-slate-400  border-b border-solid border-sidebarBorder  " placeholder="請輸入文字" type="text"></input>
+          <button className="text-[15px] ml-3 px-2 py-1 hover:bg-slate-400 duration-200 bg-slate-500 rounded-xl " >留言</button>
+        </div>
+      </div>*/
 
   const setLikeStatus = ()=>{
     const foundItem = likeVideos.find(item => item.id === coverData.videoId);
@@ -84,7 +92,8 @@ const Video = () => {
         <img src={boy} className="rounded-full w-[70px] h-[70px]"/>
         <div className="ml-8 ">
           <p>惠勝</p>
-          <input className="w-[450px] bg-black  text-[20px] text-slate-400  border-b border-solid border-sidebarBorder  " placeholder="請留言" type="text"></input>
+          <input className="mt-2 w-[450px] bg-black  text-[15px] text-slate-400  border-b border-solid border-sidebarBorder  " placeholder="請輸入文字" type="text"></input>
+          <button className="text-[15px] ml-3 px-2 py-1 hover:bg-slate-400 duration-200 bg-slate-600 rounded-xl " >留言</button>
         </div>
       </div>
       <div className="mt-[40px] flex w-[450px]">
