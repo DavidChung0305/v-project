@@ -1,11 +1,11 @@
 import boy from "@/assets/images/boy.jpg"
-import big from "@/assets/images/big.jpg"
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useVideoStore } from "@/store/video.js"
 import {Api} from "@/api/module/video.js"
 import VideoChannelCard from "@/components/VideoChannelCard"
 import CommentCard from "@/components/CommentCard"
+import VideoSideCard from "@/components/VideoSideCard"
 import axios from "axios"
 
 
@@ -13,6 +13,8 @@ const Video = () => {
   const [coverData, setCoverData] = useState([])
   const [commentsData, setCommentsData] = useState([])
   const {likeVideos, setLikeVideos} = useVideoStore()
+  const {allVideos, setAllVideos} = useVideoStore()
+  const [sideVideo, setSideVideo] = useState([])
   const navigate = useNavigate()
   const { id } = useParams()
 
@@ -68,14 +70,22 @@ const Video = () => {
       setLikeStatus()
       setCoverData(coverData)
   }
+
+  const getSideVideo = () =>{
+    const sideVideo = allVideos.filter(item => item.channelId == coverData?.channelId )
+    console.log(sideVideo)
+    setSideVideo(sideVideo)
+  }
  
   useEffect(()=>{
       getVideo()
       getComment()
-  },[])
+      getSideVideo()
+  },[coverData])
 
   return(
-    <div className="ml-2">
+  <div className=" flex" >
+    <div className="ml-2 w-[970px]">
       <div className="mt-2">
        <iframe className="rounded-xl" width="950" height="535" src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
        <p className="text-[20px] w-[800px] pt-2">{coverData?.title}</p>
@@ -96,23 +106,17 @@ const Video = () => {
           <button className="text-[15px] ml-3 px-2 py-1 hover:bg-slate-400 duration-200 bg-slate-600 rounded-xl " >留言</button>
         </div>
       </div>
-      <div className="mt-[40px] flex w-[450px]">
-        <img src={big} className="rounded-full w-[60px] h-[60px]"/>
-        <div className="ml-8 w-full">
-          <p>ㄢㄤ不分 還是要當碗路霜民！</p>
-          <p className=" text-slate-400"> 這有很厲害嗎？我啊罵在公園跳的更好😗</p> 
-          <div className="flex pt-2">
-            <i className="fa-solid fa-thumbs-up pl-[100px]"></i>
-            <i className="fa-solid fa-thumbs-down pl-[20px]"></i>
-            <button className="text-[12px] pl-[20px]">回覆</button>
-          </div>
-        </div>
-      </div>
       {commentsData.map( item => (
         <CommentCard id={item.authorChannelId} image={item.authorProfileImageUrl} name={item.authorDisplayName} text={item.textDisplay} />
       ))}
     </div>
-
+    <div className=" ml-3 w-[380px] h-[1000px] ">
+      {sideVideo.map( item =>(
+        <VideoSideCard title={item.title} image={item.thumbnails?.maxres?.url} channelTitle={item.channelTitle}
+        channelImage={item.channelImage} onClick={() => navigate(`/video/${item.videoId}`)} />
+      ))}
+    </div>
+  </div>
   )
 }
 
