@@ -81,7 +81,7 @@ const Video = () => {
       getVideo()
       getComment()
       getSideVideo()
-  },[coverData])
+  },[])
 
   return(
   <div className=" flex" >
