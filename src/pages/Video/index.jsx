@@ -6,13 +6,13 @@ import {Api} from "@/api/module/video.js"
 import VideoChannelCard from "@/components/VideoChannelCard"
 import CommentCard from "@/components/CommentCard"
 import VideoSideCard from "@/components/VideoSideCard"
+import LikeButton from "@/components/LikeButton"
 import axios from "axios"
 
 
 const Video = () => {
   const [coverData, setCoverData] = useState([])
   const [commentsData, setCommentsData] = useState([])
-  const {likeVideos, setLikeVideos} = useVideoStore()
   const {allVideos, setAllVideos} = useVideoStore()
   const [sideVideo, setSideVideo] = useState([])
   const navigate = useNavigate()
@@ -35,48 +35,14 @@ const Video = () => {
     })
   }
 
-  /*<div className="mt-[40px] flex">
-        <img src={boy} className="rounded-full w-[70px] h-[70px]"/>
-        <div className="ml-8 ">
-          <input className="mt-2 w-[450px] bg-black  text-[15px] text-slate-400  border-b border-solid border-sidebarBorder  " placeholder="請輸入文字" type="text"></input>
-          <button className="text-[15px] ml-3 px-2 py-1 hover:bg-slate-400 duration-200 bg-slate-500 rounded-xl " >留言</button>
-        </div>
-      </div>*/
-
-  const setLikeStatus = ()=>{
-    const foundItem = likeVideos.find(item => item.id === coverData.videoId);
-
-    if (foundItem !== undefined) {
-      foundItem.likeStatus = !foundItem.likeStatus;
-    }
-    else{
-      likeVideos.push({ id:coverData.videoId, title:coverData.title , image:coverData.thumbnails?.maxres , likeStatus: true })
-    }
-    setLikeVideos(likeVideos)
-  }
-
-  const likeButton = ()=>{
-    const likeItem = document.getElementById(`${coverData?.videoId}`)
-    likeItem.classList.toggle('like-checked')
-    if(likeItem.classList.contains('like-checked')){
-      likeItem.classList.remove('fa-solid')
-      likeItem.classList.add("fa-regular")
-      likeItem.likeStatus = false
-      }else{
-        likeItem.classList.remove('fa-regular')
-        likeItem.classList.add("fa-solid")
-        likeItem.likeStatus = true
-      }
-      setLikeStatus()
-      setCoverData(coverData)
-  }
-
   const getSideVideo = () =>{
     const sideVideo = allVideos.filter(item => item.channelId == coverData?.channelId )
     console.log(sideVideo)
     setSideVideo(sideVideo)
   }
- 
+  
+  console.log(coverData)
+
   useEffect(()=>{
       getVideo()
       getComment()
@@ -93,7 +59,7 @@ const Video = () => {
       <div className=" flex w-[900px]">
         <VideoChannelCard key={coverData?.videoId} image={coverData?.channelImage} title={coverData?.channelTitle} sNumber={coverData?.sNumber} onClick={() => navigate(`/channel/${coverData?.channelId}`)} />
         <div className="flex ml-[170px] my-auto">
-          <i id={coverData?.videoId} onClick={()=>likeButton()} className="like-checked fa-regular fa-thumbs-up cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2 "></i>
+          <LikeButton id={coverData?.videoId} />
           <i className="fa-regular fa-thumbs-down cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2"></i>
           <i className="fa-solid fa-ellipsis cursor-pointer text-[30px] text-black border  rounded-full w-[45px] h-[45px] pl-2.5 pt-1.5 bg-slate-200 hover:scale-110 duration-200 ml-6" ></i>
         </div>

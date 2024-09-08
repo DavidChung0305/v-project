@@ -16,6 +16,7 @@ const LikeIcon = ({ id, className }) => {
     })
     setHotVideos(newVideos)
     setLikeStatus(!LikeStatus)
+    console.log(LikeStatus)
   }
 
   return(

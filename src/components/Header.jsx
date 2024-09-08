@@ -15,7 +15,6 @@ const Header = () => {
       setAllVideos(res.data)
     })
   }
-
   const searchInput = document.getElementById('search-input')
 
   const search = () =>{

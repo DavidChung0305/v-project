@@ -10,8 +10,8 @@ import { useVideoStore } from "@/store/video.js"
 import clsx from 'clsx'
 
 const Channel = () => {
-const { channels, setChannels} = useVideoStore()
-const { subList, setSubList} = useVideoStore()
+const { dancerCards, setDancerCards} = useVideoStore()
+const [channels, setChannels ] = useState([])
 const navigate = useNavigate()
 const { id } = useParams()
 
@@ -30,7 +30,7 @@ const { id } = useParams()
     Api.getChannels().then(res =>{
       const channelDatas = res.data
       const channelData = channelDatas.find(item => item.channelId === id)
-      setChannels(channelData)
+      setChannels (channelData)
     })
   }
 
