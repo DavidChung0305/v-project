@@ -15,6 +15,7 @@ const CommentCard = ({image, name, text}) => {
     const data = [];
     data.push({ image:boy, name:'惠勝', text:inputValue })
     setReply(data)
+    setInputValue('')
   }
 
   return(
@@ -35,12 +36,12 @@ const CommentCard = ({image, name, text}) => {
                 <button onClick={addReply} className="text-[12px] ml-3 px-2 py-1 hover:bg-slate-400 duration-200 bg-slate-600 rounded-xl " >留言</button>
                 <button  onClick={() => setShowReply(false)} className="text-[12px] ml-3 px-2 py-1 hover:bg-slate-400 duration-200 bg-slate-500 rounded-xl " >取消</button>
             </div>
-            <div>
+          </div>
+          <div>
               {reply.map((item) => (
                 <CommentCard image={item.image} name={item.name} text={item.text} />
               ))}
             </div>
-          </div>
         </div>
       </div>
   )
