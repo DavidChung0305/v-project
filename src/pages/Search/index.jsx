@@ -1,5 +1,3 @@
-import beigow from "@/assets/images/beigow.jpeg"
-import snow from "@/assets/images/snow.png"
 import SearchCard from "@/components/SearchCard"
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"

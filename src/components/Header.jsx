@@ -30,7 +30,7 @@ const Header = () => {
     navigate('/search')
 
   }
-  
+
   const sideBarControll = () =>{
     document.getElementById("sideBar").classList.toggle('-translate-x-full')
     document.getElementById("mask").classList.toggle('hidden')
