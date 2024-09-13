@@ -16,6 +16,7 @@ const CommentCard = ({image, name, text}) => {
     data.push({ image:boy, name:'惠勝', text:inputValue })
     setReply(data)
     setInputValue('')
+    console.log(data)
   }
 
   return(
