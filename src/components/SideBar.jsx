@@ -48,7 +48,7 @@ const SideBar = () => {
           ))}
       </div>
       {subData.map( item => (
-        <SideBarSubCard image={item.channelImage} title={item.channelTitle} onClick={()=>navigate(`/channel/${item.channelId}`)} />
+        <SideBarSubCard key={item.channelTitle} image={item.channelImage} title={item.channelTitle} onClick={()=>navigate(`/channel/${item.channelId}`)} />
       ))}
     </div>
   )

@@ -9,8 +9,8 @@ import { useVideoStore } from "@/store/video.js"
 
 const LikeVideoList= () =>{
   const navigate = useNavigate()
-  const {likeVideos, setLikeVideos} = useVideoStore()
-  const likeData = likeVideos.filter( item => item.likeStatus === true  )
+  const {allVideos, setAllVideos} = useVideoStore()
+  const likeData = allVideos.filter( item => item.isLike === true  )
   console.log(likeData)
 
 
@@ -29,7 +29,7 @@ const LikeVideoList= () =>{
       <div className="ml-4">
         <i className="fa-solid fa-arrows-up-down w-[400px] h-[60px] text-[30px] pl-3 pt-3 "></i>
         {likeData.map( item =>(
-          <LikeVideoCard image={item.image.url} title={item.title} onClick={()=>navigate(`/video/${item.id}`)}/>
+          <LikeVideoCard image={item.thumbnails.maxres?.url} title={item.title} onClick={()=>navigate(`/video/${item.videoId}`)}/>
         ))}
       </div>
     </div>

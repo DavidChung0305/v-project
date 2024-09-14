@@ -4,14 +4,22 @@ import { useVideoStore } from "@/store/video.js"
 
 const LikeButton = ({ id }) =>{
   const {allVideos, setAllVideos} = useVideoStore()
-  const item = allVideos.find( item => item.videoId === id)
   const isLike = allVideos.find( item => item.videoId === id)?.isLike
   const [LikeStatus,setLikeStatus] = useState(isLike)
   
   const handleLike = () => {
     setLikeStatus(!isLike)
     console.log(isLike)
+    const newList = allVideos.map( item => {
+      if( item.videoId === id){
+        item.isLike = !item.isLike;
+        return item
+      }
+      return item
+    });
+    setAllVideos(newList)
   }
+
 
   useEffect(()=>{
     setLikeStatus(isLike)

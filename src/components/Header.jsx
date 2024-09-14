@@ -36,8 +36,8 @@ const Header = () => {
     document.getElementById("mask").classList.toggle('hidden')
   }
 
-  useEffect(()=>{
-    if( allVideos === null){
+  useEffect(() =>{
+    if(allVideos.length == 0 ){
       getAllVideos ()
     }
   },[])

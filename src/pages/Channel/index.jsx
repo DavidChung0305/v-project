@@ -35,14 +35,8 @@ const { id } = useParams()
   }
 
   useEffect(() => {
-    if(channels == null){
-      getChannel()
-    }
-    if(channels.channelId !== id){
-      getChannel()
-    }
-
-  }, [channels])
+   getChannel()
+  }, [id])
 
   return (
   <div className="pl-3">
