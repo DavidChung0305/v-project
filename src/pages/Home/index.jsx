@@ -24,47 +24,18 @@ const danceStyle = [
 
 //影片ID
 const artistsID = [
-  '44VVUYCguTA',
-  '5zIEHwTPGRA',
-  'z9HGT7cht9o',
-  'YopuflviAuM',
-  'hu5RAPOmjYc&t=8s',
-  'TmJ-M5X89GQ'
+  'srIGzOPIGLQ',
+  'YzDS-PddFaw&t=4s',
+  'HGPLvXv7KP8&t=2902s',
+  'rGT2G4VA3Og&t=6s',
+  'nTLWxR55ibA',
+  'losX0Kr9nXs'
 ]
 
 //完整的url
 const artistsURL = artistsID.map(id => (
   `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=AIzaSyB6yEJercL6to8ROq9DFH2gUAJA0Xk1mCc&part=snippet`
 ))
-
-
-const topics = [
-  {
-    id: 1,
-    title:'這就是街舞爆料RRRRRRRRRRR',
-    image: boogieTie
-  },
-  {
-    id: 2,
-    title:'我認真solo起來，連我自己都怕',
-    image: yi
-  },
-  {
-    id: 3,
-    title:'『Like? Unlike? 都給我尬起來』',
-    image: talkSnow
-  },
-  {
-    id: 4,
-    title:'『來聊聊台灣Locking歷史吧』',
-    image: talkLockingHistory 
-  },
-  {
-    id: 5,
-    title:'ft.Beigow『你各位有什麼想問的快問～』',
-    image: talkBeigow
-  }
-]
 
 const getChannelsData = async() =>{
   return await Api.getChannels()
@@ -79,6 +50,10 @@ const Home = () => {
   const navigate = useNavigate() //跳轉頁面
   const { hotVideos, setHotVideos} = useVideoStore()
   const { dancerCards, setDancerCards} = useVideoStore()
+
+  const topicss = dancerCards.filter( item => item.channelTitle == "elsewhite")
+  const topics = topicss[0].videos
+  console.log(topics)
 
   //Modal以下
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -154,8 +129,8 @@ const Home = () => {
     <h4 className="mt-5 font-bold">特色話題</h4>
     <Swiper>
         {topics.map(item => (
-          <SwiperSlide key={item.id} className="w-[300px] ">
-            <TopicCard title={item.title} image={item.image} />
+          <SwiperSlide key={item.videoId} className="w-[300px] ">
+            <TopicCard title={item.title} image={item.thumbnails.maxres?.url} onClick={() => navigate(`/video/${item.videoId}`)} />
           </SwiperSlide>
         ))}
     </Swiper>
