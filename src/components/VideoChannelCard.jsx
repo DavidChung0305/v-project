@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useVideoStore } from "@/store/video.js"
 
 const VideoChannelCard = ({ image, title, sNumber, onClick, id}) =>{
+  console.log(id)
   return(
   <div className='flex'>
   <div className="flex w-[300px] mt-3 cursor-pointer" onClick={onClick}>

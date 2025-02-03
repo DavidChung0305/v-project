@@ -41,7 +41,7 @@ const Video = () => {
     setSideVideo(sideVideo)
   }
   
-  console.log(coverData)
+  console.log(coverData.channelId)
 
   useEffect(()=>{
       getVideo()
@@ -57,7 +57,7 @@ const Video = () => {
        <p className="text-[20px] w-[800px] pt-2">{coverData?.title}</p>
       </div>
       <div className=" flex w-[900px]">
-        <VideoChannelCard key={coverData?.videoId} image={coverData?.channelImage} title={coverData?.channelTitle} sNumber={coverData?.sNumber} onClick={() => navigate(`/channel/${coverData?.channelId}`)} />
+        <VideoChannelCard id={coverData?.channelId} image={coverData?.channelImage} title={coverData?.channelTitle} sNumber={coverData?.sNumber} onClick={() => navigate(`/channel/${coverData?.channelId}`)} />
         <div className="flex ml-[170px] my-auto">
           <LikeButton id={coverData?.videoId} />
           <i className="fa-regular fa-thumbs-down cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2"></i>

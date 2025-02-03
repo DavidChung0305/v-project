@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useVideoStore } from "@/store/video.js"
 
 const SubscribeButton = ({ id }) =>{
+  console.log(id)
   const { dancerCards, setDancerCards} = useVideoStore()
   const foundItem = dancerCards.filter( item => item.channelId === id )
   const status = foundItem[0]?.channelSubStatus

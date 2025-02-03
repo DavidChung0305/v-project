@@ -2,7 +2,7 @@ import boy from "@/assets/images/boy.jpg"
 import { useState } from "react"
 import clsx from "clsx"
 
-const CommentCard = ({image, name, text}) => {
+const CommentCard = ({image, name, text, children}) => {
   const[showReply, setShowReply] = useState(false)
   const[reply, setReply] = useState([])
   const [inputValue, setInputValue] = useState('');
