@@ -27,7 +27,7 @@ const SubscribeButton = ({ id }) =>{
   
   return(
     <div onClick={subscribe} >
-       <i  className={clsx("mt-8 fa-regular fa-bell w-[130px] h-[42px] text-2xl pl-[8px] pt-1  border border-solid border-white rounded-lg  hover:bg-sidebarButtonColor cursor-pointer duration-200", subscribeStatus ? "fa-solid" : "fa-regular" )} >
+       <i  className={clsx("fa-regular fa-bell font-bold text-base px-4 py-2 border border-solid border-white rounded-[24px]  hover:bg-sidebarButtonColor cursor-pointer duration-200", subscribeStatus ? "fa-solid" : "fa-regular" )} >
         {subscribeStatus ? ' 已訂閱' : ' 訂閱'}
        </i>
     </div>

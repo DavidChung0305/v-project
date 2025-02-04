@@ -53,7 +53,6 @@ const Home = () => {
 
   const topicss = dancerCards.filter( item => item.channelTitle == "elsewhite")
   const topics = topicss[0].videos
-  console.log(topics)
 
   //Modal以下
   const [isModalOpen, setIsModalOpen] = useState(false);

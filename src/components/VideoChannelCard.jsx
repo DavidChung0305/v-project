@@ -14,7 +14,7 @@ const VideoChannelCard = ({ image, title, sNumber, onClick, id}) =>{
       <p className="text-[15px] text-gray-500">{sNumber}</p>
     </div>
   </div>
-  <SubscribeButton id={id} className='h-[20px]' />
+  <SubscribeButton id={id} />
 </div> 
   )
 }
