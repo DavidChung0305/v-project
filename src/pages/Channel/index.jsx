@@ -45,7 +45,7 @@ const { id } = useParams()
     <div className="flex mt-4 border-b border-solid border-sidebarBorder pb-2">
     <Swiper >
         {channels?.videos?.map(data => (
-        <SwiperSlide className=" pl-2 " key={data.videoId} >
+        <SwiperSlide key={data.videoId} >
           <ChannelVideoCard title={data.title} image={data.thumbnails.maxres?.url} describe={data.description} onClick={() => navigate(`/video/${data.videoId}`)} />
         </SwiperSlide>
         ))}
