@@ -7,6 +7,7 @@ import { SwiperSlide } from 'swiper/react'
 import Swiper from "@/components/Swiper/manipulate.jsx"
 import {Api} from "@/api/module/video.js"
 import { useVideoStore } from "@/store/video.js"
+import './index.css'
 import clsx from 'clsx'
 
 const Channel = () => {
