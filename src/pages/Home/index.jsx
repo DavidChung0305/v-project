@@ -1,9 +1,3 @@
-
-import boogieTie from "@/assets/images/boogie tie.jpeg"
-import yi from "@/assets/images/yi.jpeg"
-import talkSnow from "@/assets/images/talk snow.jpeg"
-import talkLockingHistory from "@/assets/images/talkLockHistory.jpeg"
-import talkBeigow from "@/assets/images/beigow.jpeg"
 import BannerCard from "@/components/BannerCard"
 import axios from "axios"
 import { useState,useEffect } from "react"
@@ -126,13 +120,13 @@ const Home = () => {
       </GrabCursor>
     </div>
     <h4 className="mt-5 font-bold">特色話題</h4>
-    <Swiper>
-        {topics.map(item => (
-          <SwiperSlide key={item.videoId} className="w-[300px] ">
-            <TopicCard title={item.title} image={item.thumbnails.maxres?.url} onClick={() => navigate(`/video/${item.videoId}`)} />
-          </SwiperSlide>
-        ))}
-    </Swiper>
+      <Swiper>
+          {topics.map(item => (
+            <SwiperSlide key={item.videoId} className="w-[300px] ">
+              <TopicCard title={item.title} image={item.thumbnails.maxres?.url} onClick={() => navigate(`/video/${item.videoId}`)} />
+            </SwiperSlide>
+          ))}
+      </Swiper>
     <h4 className="mt-5 font-bold">本週熱門</h4>
     <div className="flex flex-wrap">
       {hotVideos.map(data => (

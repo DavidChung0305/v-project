@@ -30,7 +30,9 @@ const LikeButton = ({ id }) =>{
      hover:scale-110 duration-200 mx-2 "*/
 
   return(
-    <i id={id} onClick={ handleLike } className={ clsx("fa-regular fa-thumbs-up cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2", LikeStatus ? "fa-solid" : "fa-regular" )} ></i>
-  )
+    <>
+      <i id={id} onClick={ handleLike } className={ clsx("fa-regular fa-thumbs-up cursor-pointer text-black text-[35px] border  rounded-full w-[100px] h-[36px] py-0.5 pl-4 bg-slate-200  mx-2", LikeStatus ? "fa-solid" : "fa-regular" )} ></i>
+    </>
+    )
 }
 export default LikeButton

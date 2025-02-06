@@ -8,6 +8,7 @@ import CommentCard from "@/components/CommentCard"
 import VideoSideCard from "@/components/VideoSideCard"
 import LikeButton from "@/components/LikeButton"
 import axios from "axios"
+import clsx from 'clsx'
 
 
 const Video = () => {
@@ -15,6 +16,7 @@ const Video = () => {
   const [commentsData, setCommentsData] = useState([])
   const {allVideos, setAllVideos} = useVideoStore()
   const [sideVideo, setSideVideo] = useState([])
+  const [dotButtonControll, setDotButtonControll] = useState(false)
   const navigate = useNavigate()
   const { id } = useParams()
 
@@ -47,7 +49,7 @@ const Video = () => {
       getVideo()
       getComment()
       getSideVideo()
-  },[])
+  },[coverData.videoId])
 
   return(
   <div className=" flex" >
@@ -58,10 +60,17 @@ const Video = () => {
       </div>
       <div className=" flex w-[900px]">
         <VideoChannelCard id={coverData?.channelId} image={coverData?.channelImage} title={coverData?.channelTitle} sNumber={coverData?.sNumber} onClick={() => navigate(`/channel/${coverData?.channelId}`)} />
-        <div className="flex ml-[170px] my-auto">
+        <div className="flex ml-[100px] my-auto">
           <LikeButton id={coverData?.videoId} />
-          <i className="fa-regular fa-thumbs-down cursor-pointer text-black text-[35px] border  rounded-full w-[120px] h-[45px] py-1 pl-4 bg-slate-200 hover:scale-110 duration-200 mx-2"></i>
-          <i className="fa-solid fa-ellipsis cursor-pointer text-[30px] text-black border  rounded-full w-[45px] h-[45px] pl-2.5 pt-1.5 bg-slate-200 hover:scale-110 duration-200 ml-6" ></i>
+          <i className="fa-regular fa-thumbs-down cursor-pointer text-black text-[35px] border  rounded-full w-[100px] h-[36px] py-0.5 pl-4 bg-slate-200  mx-2"></i>
+          <i className="fa-solid fa-ellipsis cursor-pointer text-[20px] text-black border  rounded-full w-[30px] h-[30px] py-1 px-1.5 bg-slate-200 ml-6" onClick={() => setDotButtonControll(!dotButtonControll)}>
+            <div className={clsx("p-1 w-[148px] h-[124px] bg-white rounded-md  ", dotButtonControll? "" : "hidden" )}>
+              <button className="flex h-[33px] w-[138px]  rounded-md hover:bg-slate-400">
+                <i className=" m-0.5 fa-solid fa-hourglass-start text-[28px] "></i>
+                <p className="text-[15px] mx-1 mt-2">儲存至稍後觀看</p>
+              </button>
+            </div>
+          </i>
         </div>
       </div>
       <div className="mt-[40px] flex">
