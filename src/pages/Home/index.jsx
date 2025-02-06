@@ -96,34 +96,34 @@ const Home = () => {
 
 
   return (
-    <>
+    <div className=" w-10/12 mx-auto">
     <h4 className="mt-1 font-bold">熱門舞風</h4>
     <div className="mt-2 flex">
-      <div className="w-[1180px] h-[70px] py-2 overflow-hidden ">
+      <div className="w-[85vw] h-[70px] py-2 overflow-hidden ">
         {danceStyle.map((dance, idx) =>(
-          <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 ml-2 mr-10 last:mr-0 hover:scale-110 duration-200">
+          <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-white border-solid rounded-lg my-2 mx-[2vw] hover:scale-110 duration-200">
             {dance}
           </button>
         ))}
       </div>
       <button><i className="fa-solid fa-ellipsis hover:scale-150 duration-200" onClick={showModal}></i></button>
     </div>
-    <Modal title="全部舞風" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          {danceStyle.map((dance, idx) =>(
-            <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-black border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-110 duration-200">
-            {dance}
-            </button>
-          ))}
-    </Modal>
+      <Modal title="全部舞風" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            {danceStyle.map((dance, idx) =>(
+              <button key={idx} onClick={()=> navigate(`/style/${dance}`)} className="py-2 px-3 border-2 border-black border-solid rounded-lg mx-3 my-4 last:mr-0 hover:scale-110 duration-200">
+              {dance}
+              </button>
+            ))}
+      </Modal>
     <h4 className="mt-5 font-bold">舞者</h4>
     <div className="flex mt-2">
-    <GrabCursor>
-      {dancerCards.map(item => (
-        <SwiperSlide className="w-[200px] pl-2">
-          <Dancer key={item.channelId} image={item.channelImage} name={item.channelTitle} style={item.danceStyle} onClick={() => navigate(`/channel/${item.channelId}`)} />
-        </SwiperSlide>
-      ))}
-    </GrabCursor>
+      <GrabCursor>
+        {dancerCards.map(item => (
+          <SwiperSlide className="w-[200px] py-2">
+            <Dancer key={item.channelId} image={item.channelImage} name={item.channelTitle} style={item.danceStyle} onClick={() => navigate(`/channel/${item.channelId}`)} />
+          </SwiperSlide>
+        ))}
+      </GrabCursor>
     </div>
     <h4 className="mt-5 font-bold">特色話題</h4>
     <Swiper>
@@ -139,7 +139,7 @@ const Home = () => {
         <BannerCard id={data.videoId} title={data.title} image={data.thumbnails.maxres?.url} describe={data.description} onClick={() => navigate(`/video/${data.videoId}`)} />
       ))}
     </div>
-  </>
+  </div>
   )
 }
 

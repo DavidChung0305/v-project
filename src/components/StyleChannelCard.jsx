@@ -5,7 +5,7 @@ const StyleChannelCard = ({ title, style, introduction, image, onClick })=>{
         <div className=" w-[190px] h-[220px] pl-1 my-auto ">
           <h1 className=" mt-2 text-[23px] ">{title}</h1>
           <h1 className=" mt-4 text-slate-500 text-[19px] ">{style}</h1>
-          <div className=" px-1 py-1 mt-4 bg-slate-900 w-[180px] h-[123px] rounded-md overflow-hidden">
+          <div className=" px-1 py-1 mt-4 bg-slate-900 w-full h-[123px] rounded-md overflow-hidden">
             <p className=" text-slate-500 ">{introduction}</p>
           </div>
         </div>
