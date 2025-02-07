@@ -17,7 +17,7 @@ const LikeVideoList= () =>{
 
   return(
     <div className="flex mt-4 ml-20 ">
-      <div className='card'>
+      <div className='lCard'>
         <div className="mx-auto w-[280px]">
           <img src={beigow} className="w-full h-[160px] mt-5 rounded-lg"/>
           <h1 className="text-[30px] font-bold  mt-5">喜歡的影片</h1>

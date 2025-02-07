@@ -1,6 +1,7 @@
 [
     
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2019-08-29T13:07:00Z",
@@ -45,6 +46,7 @@
             "videoId": "NvKF4zT0exA"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2023-09-12T02:24:45Z",
@@ -89,6 +91,7 @@
             "videoId": "qVgfA8DQQDQ"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2020-12-27T13:45:12Z",
@@ -145,6 +148,7 @@
             "videoId": "sIMdDwydQwM"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2021-08-26T15:27:56Z",
@@ -184,6 +188,7 @@
             "videoId": "oagCddwPjZk"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2023-12-10T13:52:20Z",
@@ -239,6 +244,7 @@
             "videoId": "LTR8qVXXIwQ"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2023-12-08T12:31:00Z",
@@ -295,6 +301,7 @@
         },
     
   {   
+    "watchLater":false,
         "isLike":false,
       "sNumber":"訂閱數：2486",  
       "publishedAt": "2024-01-08T19:29:47Z",
@@ -339,7 +346,8 @@
       "style": "urban",
       "channelImage":"data:image/jpeg;base64,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"
   },
-  {   
+  { 
+    "watchLater":false,  
     "isLike":false,
       "sNumber":"訂閱數：2486",
       "publishedAt": "2017-05-26T17:00:07Z",
@@ -419,7 +427,8 @@
       "style": "urban",
       "channelImage":"data:image/jpeg;base64,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"
   },
-  {
+  { 
+    "watchLater":false,
     "isLike":false,
     "sNumber":"訂閱數：2486",  
     "publishedAt": "2022-12-16T18:11:55Z",
@@ -489,6 +498,7 @@
       "channelImage":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIREhUTEBISERIVEhITFxgWFRUTFxYVFhUWFxUVFhUYHyggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0ODw8QEC0ZFRkrKysrKysrKy0rKysrKysrKysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALIBHAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcFCAECAwT/xABEEAABAwICBgYIAwYEBwEAAAABAAIDBBEFBwYSITFBURMyYXGhsSIzQlJigZHBI3LRFCRDRIKyU9Lh8BVzg5KTosII/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8AvFERAREQEREBERAREQEREBERAREQEsiICLq91tp2BYLGNMaCkF56qJh5awc76NuUGfRVBjuetLHcUkMk7uDnfhs+7vBQKuzlxWSQPY+KJoNwxrAWnscXbT8rINnEUAy8zNp8SaI5CIKoDawnY/tjJ3928KfoCIiAiIgIiICIiAiIgIiICIiAiIgIiIC4XKIIbp8MTiZ+04ZIHFg9OBzQ4PaN7mcQ7suq5w/PqVuyqo2uI2Ho3lhv+V17FXwVTubeV37RrVlAz8bfJEP4nNzRwd5oPtos9cPdbpIqmMnf6LXgfMEE/RZNucmEH+NIP+k9ax1EDo3Fr2uY4bw4FpHyK81RtPFm7hDv5kjvjePsu7s2MIH82D3Mk/RaqooNoX5yYQP40h7onrGVWemHNvqR1Mh4ei1oPzLr+C1xRUXlWZ/D+DRH+uT7NCjGJZ2YnJ6voYB8LNY/VxKrRcsaSbAEns2oM5iumFfVX6ermcDw1y1vdYWWDJWZw3ROuqPU0k7/AOgtH1NgpZhuTGKS212RQNPvvFx/SEFcorhrMm4aKB9RiFdqsjbciJm88GguO0ncqiqHAuJaCG3NgdpA4X7UCGQsIc0lrgbgg2II4g8FeGWWbuuWUuIn0jZrJuZ3ASDge1UWprlTok7Ea1l7iGEtkkd3G7WjtJUG1gK5XDW2FlygIiICIiAiIgIiICIiAiIgIiICIiAiIg4ui6vO/ZwUWp8wsPMroZZv2eZpLSyYGM37zsI7UGXxbR6lqhaop4pfzNBP13qH4jkxhUu1jJYT8Eh8nXCncGJQvF2SxuHMPafIru6tiG+SMd7mj7oKiqMgqYn8OrnaPiax3kAvkfkA3hXH5xD/ADK3KjSGkZ16mBvfIz9ViKvMXCo761bCSODTrHwQV5HkAz2q53yiH3KyFHkNRt9bU1D+7UYPIrLVmc+FM6r5ZD8MZt9So9W5+wj1NHK787mt8rqiWUGUeExfy5lPOR7neF7KT0Gj1JALQ00MdvdjaPGyo2uz4rXD8Gngi5F2tJ4bFHq7NvFpb/vAiB4RsaLd17oNpmgAcAPovlq8Thj2ySxsFvae0ea1DrtLa+Y3lrKh1+Akc0fRtgsTLM53WLnHmSSfFQWHnBp1/wAQn6CB/wC6QnZbdK/i/uHBVwUXIVHtSUzpXsjjaXPe4NaBe5JNgtssvdFGYZSMhA/EcNeV3N57eQ3KssgNEWP1sQls4tc6OEb7EdZ57eA+avZQEREBERAREQEREBERAREQEREBERAREQEREBQbMnL2HFItZoEdUwehJz+B/MeSnK6koNLcQpZ6WV8MmvHJG4tcLkWI+y+Z1S873vP9RUszaxJlRilS+Pqtc2O/MsaGkj5hQ5ByT3lFLMBy5xKsjbLBADE7quc5oB4X5qVUORNe71s1PF3az/0QVQllfFFkFHs6aseeeowDzUhoMlMLjsXiaYj3nkA94CDWVesUDndVrndwJ8ltpRZd4XFbUooSQb3cC4+KztPhkEfq4YmflY0eQVGoVFotXTeqpJ390bvupBQ5T4tLb926MH/Ee1tu8b1tQig12psiK9wu+enZ2Xe7yC9ZMha0dWpp3dhDx9lf89ZHH6x7GfmcG+awdfp3hsPrKyAdzw7+26Cq9EdHccwSXWZCKmmcfxI43g3+JoO0O81d1BViWNrw1zbi+q4FrgeIIO4rFaP6YUVcS2knZK5ouW7Q63Ox4LOWQdkREBERAREQEREBERAREQEREBERAREQEREHBcq9zY09Zh8DoYXA1cjSGgewDsL3cuxSDTl1cKV//DAw1Fx1t+rx1OGtu3rU7FnTmZ5quk6fWOv0l9a/bdB8b3kkkkkkkkniTtK6ouzHWIOw2IO3d81RtllXRuhwqka64Ji17djyXDwKlT5A3rEDvIC1OqcycUeA0Vb42jYGsDWAAbABs3LBVmN1MtzLUTyX96R5H0vZBt5XaS0cPraqBlucjVHK/NjCYv5oSf8ALa5/iAtViUUGxFfnvRN9TBPL2kNYPE38FHa7P2Y+po429r3l3gAFTJXNkFh1+c2KyX1ZIoQfcjFx83XUdrtOsSmv0lbOQeAeWD6Nso6FyBfcqPWarkfte97j8TifNeK+ymwmokIEcEzyd2rG43+gX21mildDEZpqWeKJtgXPYWgX532oPHR7GpaKojqISQ+N1+xzfaaewhbbaK6QRV9NHUQnY8bRxa72mn5rTYqwcodNjh1T0crj+zTENfyY49V4+6g2hRdI5AQCNoIuDzHNd0BERAREQEREBERAREQEREBERAREQEREHFlE9NtAqTE2fit1JgLNlbscO/3h2FSwlAEGpWmmX9Zhrj0rDJDc6srAS0j4vdPeooxpOwXJ7BdbuyRBwIcA4HeCAQfkV87MLgb1YYh3MaPsg04p8FqZOpTzu7o3nxss1RZdYpL1KOUDm4Bo8SttWMA3ADuFvJdiUGslJkxir+syKMfFIL/QLOUeQlUfW1ULOxrXOKvaoxCKP1ksbOPpPa3zWBrcwcLh69bB/S7X/tuggVJkFAPW1kruYaxoHis5RZJ4WzriaU/FJYfRoC5rs6sLjvqOmmPwxkeLrLAVefsV/wAKjkIvvc9rdncAqJzR5ZYTFbVo43EcXXf5lZyk0fpIvVU0Ef5Y2D7Lz0Z0ghr6dlRTu1mOG0cWu9prhzCywKg6NjaNwA7hZVpnppSymozSizpqkFtt+rH7Tj5BWFi+Ix00T5pXBscbC5xPIf7t81qLpjpFJiFVJUSe0bMHusHVaP8AfFBhCuV1WX0XwCWvqY6eEXc87Twa3i49yC/ch9IJqqidHMHEQOEbJD7TSNjb8SP0VnrE6M4DFQ08dPCLNYBc8XO4uPaSssgIiICIiAiIgIiICIiAiIgIiICIiAiIg+HFoZXxkQSCKUbWktDm35ObyVYYrmvV4dKYcSoPSG58TjqSN95ut5K3LLEaS6PU9fCYamMPadx9pp5tPAoKunz9ht+HRyE/E9o8lgq/PisdfoaeCLkXF0mzu2LA6cZXVdA8uiY6ppyfRewXI5B7RtB7dyicGA1TzZlNO49kb/0VEors28Wlv+8CMH3GNFu691gK7S/EJvW1lQ6+wgSOaPo2wX20uXmKyH0aGcdrm6g+rrLLUuT2Lv3wMZ+aRo8roILLM53Wc53eSfNeatalyIr3esmp4+y7nHwCzNLkCf4td/2Rfq5BSC5uthqPIehb62eok7i1o8lm6PJ7CY98D5D8cjj4XsoKPy104kwue5u6mkIErP8A7b8Q8VtTTVDXsa9m1rmhwPYRcLAUegGGRG7KKC43EsBP1K88w9J2YZRvl2dIR0cLd13kbNnIb+4IKuz70y6R4w+F3oss6Yg73+yz5byqZK9aqofI90kji57nFzid5JNyV5KjtHGXEBoJJIAA3knYAtnspdBxhtOHygftUwBeeLG8GD7qCZGaCdI4YhUt9Bp/AaR1nf4ncOCvuyg5REQEREBERAREQEREBERAREQEREBERAREQdbrmyj2mWG1MsJdRTGGqju5h9l/ON7TsIPgqjgzxrYSY6qkjdKwlrrOMZuNhu3btQX7ZLKhJs/p/Zooh3yOPkFj6jPbEHdSGmZ8nu+6DYtFrKM6cV1gdeHVvtb0YsRyvvV46BaawYpCHxnUlbskjJ2tPMc28iqJSV4z1TGbXvYz8zg3zXpILgjmLLWPNbQ+qoJjI6WWelkcSx7nOOqSeo/l2HioL/rtNMOh9ZWQN/rDvAXUcrc48Jj3SySH4IyR9StYSuEF/Yhn3Ti4gpZXkbi9zWg/IbVVGnWmtRisokmsxjAQyNpOq2+834ntUYRAUxyy0NfilUGkEU8ZDpXdnBg7SoewX2cbhbd6A6Nx4fRxxRj0i1r5HcXPIuST4KjP0lKyJjY2NDWMaGtA3ADYF7rgLlQEREBERAREQEREBERAREQEREBERAREQEREBVNm1lia0mqogBUAemzcJQNxHJ/mrZRBpXX4TPA4tmhlicDb0mOH+hXFNhU8tujgmkvu1Y3O8gt0JYWu6zWu7wCuY4mjqtA7gArRqbQ5c4rNYsopQDxfqs+ocbrq2mxLBKhkz4300gOwnax44tJGwg8t623KxWkWBQV0DoKlgexw+bTwc08CEGIy/wBOIMVhDmehO0fiRk7WnmObSpDimHRVMToZ2CSN4LXA8vstY9IMDrdHq1skTzq3vFKB6MjeLHjnzHzV8Zf6cwYpDrNIjnYAJYydoPvDm081BQ+ZmX0uFy6zAZKR59B/uE+w88+R4rE6E6JvxOYwxyxREDW/EJu4fC0db6raXHZ6KSJ8VXJAYnghzXvb+u9aw6VUEeHVgdh9YyZgOvG+N93x2PVfbj5qi0MLyFhFjU1cjzxEbQwH63Kl+G5U4TD/AColI4yOL/NRTR7POm6Bv7bHIKgCzujaC19vaG3ZfkvSoz7ox6ulqXd/RtHmVBLMTyxwqZur+ysjPvR3Y4ctoUowuk6GJkReZNRgZrO3kNFgT2qmZf8A9AbfRoTbtmsfBqk2imcdDWPEcodSyONhrkFhPIPG752QWWi6tdcXG267ICIiAiIgIiICIiAiIgIiICIiAiIgIiIC6OXdEEB0g06fhc2piEBNO8/hzxC4/LIw7nDsO1ZSgzDwuZt2VsI7Hu1D9HWWYx3BoayF8FQwPjeLEcQeBaeBHNau5haDzYXMWuBfA4/hyW2Ee67k4INhq7MjCoetWxONtzLv/tuFH6zO/DGdQTynsZqjxK1rsiC9a/P5n8CicTffJILW7gFgK7PWvffooaeLlsL7fVVQiolWken1fXs6OqlDoyQdUMa0AjcRxCjcNQ9hux7mHddpLTblcLyXtBSySerY95+Fpd5IOkkhdtcS49pJ810Uiw7QfEp7dFRzkHiW6g/9rKS0GS+KyddsUI+J4JHyCCt1yFddDkFIfX1jRzEbCfF1lnaTIahb6yoqJO7UZ9ig13XK2TGR2F86r/yt/wAq8ajIrDiPQkqWHnrNd4WCCIZV5qGn1aSvcXQ7GxynaY+Aa/m3t4K/4ZQ4BzSHNIuCDcEc7qkMSyCNv3asueUrLeLV9+iDsWwQ9DXQuqaG9hJEekMPbbfq9nBQXIi8KOrZKxr43B7HC4IN7r3QEREBERAREQEREBERAREQEREBERAREQF8WKYZFUxuinjbLG4WLXC4/wBF9qIKkxPImie4uhnnhafZ9F4HcSL/AFKx7MgY77a19uyMA+aupEFSU2QtEPWVNS/u1Gj+1ZmkybwllrwySEe/K/xANlYaII1RaBYZD6uigB5lgcfqVnYKKNmxkbGAe60DyC+hEHFkC5RAREQEREBdHNXdEHjFTtbsa0NF77Nm3nYL2REBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERBwVwERB2REQEREBERAREQEREBERAREQEREBERB/9k="
   },
   { 
+    "watchLater":false,
     "isLike":false,    
     "sNumber":"訂閱數：2486",
       "publishedAt": "2021-03-05T18:00:15Z",
@@ -534,6 +544,7 @@
      "channelImage":"data:image/jpeg;base64,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"
   },
   { 
+    "watchLater":false,
     "isLike":false,
     "sNumber":"訂閱數：2486",
       "publishedAt": "2024-02-05T18:00:09Z",
@@ -579,6 +590,7 @@
       "channelImage":"data:image/jpeg;base64,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"
   },
   { 
+    "watchLater":false,
     "isLike":false,    
     "sNumber":"訂閱數：2486",
       "publishedAt": "2021-10-22T17:00:11Z",
@@ -651,6 +663,7 @@
   },
   
     {   
+        "watchLater":false,
         "isLike":false,
         "sNumber":"訂閱數：2486",
         "publishedAt": "2022-11-01T15:20:22Z",
@@ -707,6 +720,7 @@
         "videoId": "AvbdItgxgNw"
     },
     {   
+        "watchLater":false,
         "isLike":false,
         "sNumber":"訂閱數：2486",
         "publishedAt": "2019-10-29T13:41:11Z",
@@ -759,7 +773,8 @@
         "defaultAudioLanguage": "zh-TW",
         "videoId": "OKRYUtSPl7k"
     },
-    {  
+    {   
+        "watchLater":false,
         "isLike":false, 
         "sNumber":"訂閱數：2486",
         "publishedAt": "2020-09-28T16:56:00Z",
@@ -807,6 +822,7 @@
         "videoId": "M_7j8QmAXlg"
     },
     {   
+        "watchLater":false,
         "isLike":false,
         "sNumber":"訂閱數：2486",
         "publishedAt": "2020-09-28T16:55:33Z",
@@ -854,6 +870,7 @@
         "videoId": "C3KoFwKQDUw"
     },
     {  
+        "watchLater":false,
         "isLike":false, 
         "sNumber":"訂閱數：2486",
         "publishedAt": "2017-12-04T04:43:17Z",
@@ -898,6 +915,7 @@
         "videoId": "vJv9yVV2o3s"
     },
     {   
+        "watchLater":false,
         "isLike":false,
         "sNumber":"訂閱數：2486",
         "publishedAt": "2023-11-16T02:47:36Z",
@@ -955,7 +973,9 @@
     },
   
     
-        {   "isLike":false,
+        {   
+            "watchLater":false,
+            "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2021-05-04T15:24:24Z",
             "channelId": "idJuann",
@@ -1008,6 +1028,7 @@
             "videoId": "JzVECrLLTWw"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2019-12-09T03:12:27Z",
@@ -1052,6 +1073,7 @@
             "videoId": "08FycI_RFeo"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2023-05-09T03:56:36Z",
@@ -1107,6 +1129,7 @@
             "videoId": "Sl2qfvdroEA"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2022-07-25T13:22:24Z",
@@ -1210,6 +1233,7 @@
             "videoId": "laDu6VQT5Cg"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2021-12-07T13:38:43Z",
@@ -1313,6 +1337,7 @@
             "videoId": "AIUuhfprTqA"
         },
         {   
+            "watchLater":false,
             "isLike":false,
             "sNumber":"訂閱數：2486",
             "publishedAt": "2019-12-25T12:16:17Z",
@@ -1359,6 +1384,7 @@
 
 
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2023-10-28T13:00:00Z",
@@ -1434,6 +1460,7 @@
                 "videoId": "1zyFqMJ2Bfs"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2023-04-29T04:59:54Z",
@@ -1509,6 +1536,7 @@
                 "videoId": "TiMqP2SU7MA"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2023-04-24T08:58:11Z",
@@ -1561,6 +1589,7 @@
                 "videoId": "-GQg25oP0S4"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2017-06-08T13:10:11Z",
@@ -1617,6 +1646,7 @@
                 "videoId": "aJ55DJE4Os4"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2022-05-31T14:59:57Z",
@@ -1692,6 +1722,7 @@
                 "videoId": "Frt0ZU-QTuA"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2020-06-27T13:30:12Z",
@@ -1775,6 +1806,7 @@
 
 
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2016-09-13T18:00:02Z",
@@ -1827,6 +1859,7 @@
                 "videoId": "zOyA92EicfM"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2017-04-19T21:28:18Z",
@@ -1894,6 +1927,7 @@
                 "videoId": "cMTYg4hO5KU"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2018-11-09T17:00:03Z",
@@ -1950,6 +1984,7 @@
                 "videoId": "Q_1pyfPtyY4"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2017-01-24T20:00:01Z",
@@ -2018,6 +2053,7 @@
                 "videoId": "fuULhuG64OY"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2023-07-10T20:45:29Z",
@@ -2089,6 +2125,7 @@
                 "videoId": "c0aXjVV4kqI"
             },
             {   
+                "watchLater":false,
                 "isLike":false,
                 "sNumber":"訂閱數：2486",
                 "publishedAt": "2016-04-30T02:51:29Z",
@@ -2135,6 +2172,7 @@
             
             
                 {   
+                    "watchLater":false,
                     "isLike":false,
                     "sNumber":"訂閱數：2486",
                     "publishedAt": "2017-06-09T00:30:54Z",
@@ -2198,6 +2236,7 @@
                     "videoId": "5zIEHwTPGRA"
                 },
                 {   
+                    "watchLater":false,
                     "isLike":false,
                     "sNumber":"訂閱數：2486",
                     "publishedAt": "2019-03-29T12:09:58Z",
@@ -2254,6 +2293,7 @@
                     "videoId": "w_QS5ZJLYWA"
                 },
                 {   
+                    "watchLater":false,
                     "isLike":false,
                     "sNumber":"訂閱數：2486",
                     "publishedAt": "2012-10-01T13:45:12Z",
@@ -2318,6 +2358,7 @@
                     "videoId": "P8RSUJVCYsM"
                 },
                 {   
+                    "watchLater":false,
                     "isLike":false,
                     "sNumber":"訂閱數：2486",
                     "publishedAt": "2018-02-19T19:31:28Z",
@@ -2381,6 +2422,7 @@
                     "videoId": "TvHtn-BP5YY"
                 },
                 {   
+                    "watchLater":false,
                     "isLike":false,
                     "sNumber":"訂閱數：2486",
                     "publishedAt": "2016-07-19T01:04:45Z",
@@ -2441,6 +2483,7 @@
                     "videoId": "SS2p9MkU2fw"
                 },
                 {   
+                    "watchLater":false,
                     "isLike":false,
                     "sNumber":"訂閱數：2486",
                     "publishedAt": "2020-09-11T17:00:10Z",
@@ -2487,6 +2530,7 @@
 
 
                     {   
+                        "watchLater":false,
                         "isLike":false,
                         "sNumber":"訂閱數：2486",
                         "publishedAt": "2024-03-13T08:48:02Z",
@@ -2535,6 +2579,7 @@
                         "videoId": "44VVUYCguTA"
                     },
                     {   
+                        "watchLater":false,
                         "isLike":false,
                         "sNumber":"訂閱數：2486",
                         "publishedAt": "2024-08-10T15:06:53Z",
@@ -2579,6 +2624,7 @@
                         "videoId": "z9HGT7cht9o"
                     },
                     {   
+                        "watchLater":false,
                         "isLike":false,
                         "sNumber":"訂閱數：2486",
                         "publishedAt": "2024-08-11T01:12:00Z",
@@ -2623,6 +2669,7 @@
                         "videoId": "YopuflviAuM"
                     },
                     {   
+                        "watchLater":false,
                         "isLike":false,
                         "sNumber":"訂閱數：2486",
                         "publishedAt": "2021-01-04T10:39:28Z",
@@ -2678,6 +2725,7 @@
                         "videoId": "hu5RAPOmjYc"
                     },
                     {   
+                        "watchLater":false,
                         "isLike":false,
                         "sNumber":"訂閱數：2486",
                         "publishedAt": "2021-03-11T09:30:02Z",
@@ -2775,7 +2823,8 @@
                     },
 
                     
-                        {
+                        {   
+                            "watchLater":false,
                             "isLike":false,
                             "sNumber":"訂閱數：2486",
                             "publishedAt": "2024-01-26T16:27:02Z",
@@ -2828,6 +2877,7 @@
                             "videoId": "srIGzOPIGLQ"
                         },
                         {   
+                            "watchLater":false,
                             "isLike":false,
                             "sNumber":"訂閱數：2486",
                             "publishedAt": "2024-07-05T16:32:36Z",
@@ -2880,6 +2930,7 @@
                             "videoId": "YzDS-PddFaw"
                         },
                         {   
+                            "watchLater":false,
                             "isLike":false,
                             "sNumber":"訂閱數：2486",
                             "publishedAt": "2021-01-08T15:50:32Z",
@@ -2932,6 +2983,7 @@
                             "videoId": "HGPLvXv7KP8"
                         },
                         {   
+                            "watchLater":false,
                             "isLike":false,
                             "sNumber":"訂閱數：2486",
                             "publishedAt": "2021-11-05T17:09:25Z",
@@ -2983,6 +3035,7 @@
                             "videoId": "rGT2G4VA3Og"
                         },
                         {   
+                            "watchLater":false,
                             "isLike":false,
                             "sNumber":"訂閱數：2486",
                             "publishedAt": "2022-08-12T17:58:45Z",
@@ -3034,6 +3087,7 @@
                             "videoId": "nTLWxR55ibA"
                         },
                         {   
+                            "watchLater":false,
                             "isLike":false,
                             "sNumber":"訂閱數：2486",
                             "publishedAt": "2024-11-15T03:20:35Z",
